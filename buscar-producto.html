@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar | Producto</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        div.buscarProducto
+        {
+            width: 90%;
+            margin: auto;
+        }
+        div.buscarProducto input[type=search]
+        {
+        	padding:6px 10px 6px 45px;
+            background:url(https://e7.pngegg.com/pngimages/876/598/png-clipart-magnifying-glass-computer-icons-magnifier-search-for-glass-magnifier.png) no-repeat left;
+            background-size: 40px 25px;
+            float:right;
+        }        
+        div.buscarProducto button
+        {
+        	float:right;
+            padding:6px 10px;
+            margin-left:5px;
+        }        
+       div.buscarProducto table, div.buscarProducto th, div.buscarProducto td
+        {
+        	border: 1px solid lightgray;
+            border-collapse:collapse;
+            padding:5px;
+        }        
+        div.buscarProducto table
+        {
+        	width:100%;
+            margin-top:50px;
+        }        
+        div.buscarProducto td{text-align:center;}
+        div.buscarProducto tr:nth-child(even) {background-color: lightgray;}
+
+        div.buscarProducto .material-icons
+        {
+            cursor: pointer;
+            margin:0 4px 0;    
+        }
+    </style>
+</head>
+<body">
+    <div class="buscarProducto">
+        <fieldset>
+            <legend><i><b>Productos</b></i></legend>
+            <button type="button" onclick="filtrado()">Buscar</button>
+            <input type="search" id="busqueda" placeholder="Buscar Producto">
+            <table>
+            	<tr>
+                	<th>Referencia Producto</th>
+                    <th>Nombre Producto</th>
+                    <th>Cantidad</th>
+                    <th>Acciones</th>
+               </tr>
+               	<tr>
+                	<td>0001</td>
+                    <td>Producto1</td>
+                    <td>100</td>
+                    <td><i class="material-icons">edit</i>
+                    <i class="material-icons">delete</i></td>
+               </tr>
+               <tr>
+                	<td>0002</td>
+                    <td>Producto2</td>
+                    <td>200</td>
+                    <td><i class="material-icons">edit</i>
+                    <i class="material-icons">delete</i></td>
+               </tr>
+               <tr>
+                	<td>0003</td>
+                    <td>Producto3</td>
+                    <td>300</td>
+                    <td><i class="material-icons">edit</i>
+                    <i class="material-icons">delete</i></td>
+               </tr>
+               <tr>
+                	<td>0004</td>
+                    <td>Producto4</td>
+                    <td>400</td>
+                    <td><i class="material-icons">edit</i>
+                    <i class="material-icons">delete</i></td>
+               </tr>
+               <tr>
+                	<td>0005</td>
+                    <td>Producto5</td>
+                    <td>500</td>
+                    <td><i class="material-icons">edit</i>
+                    <i class="material-icons">delete</i></td>
+               </tr>
+               <tr>
+                	<td>0006</td>
+                    <td>Producto6</td>
+                    <td>600</td>
+                    <td><i class="material-icons">edit</i>
+                    <i class="material-icons">delete</i></td>
+               </tr>
+               <tr>
+                	<td>0007</td>
+                    <td>Producto7</td>
+                    <td>700</td>
+                    <td><i class="material-icons">edit</i>
+                    <i class="material-icons">delete</i></td>
+               </tr>
+               <tr>
+                	<td>0008</td>
+                    <td>Producto8</td>
+                    <td>800</td>
+                    <td><i class="material-icons">edit</i>
+                    <i class="material-icons">delete</i></td>
+               </tr>
+            </table>
+        </fieldset>
+    </div>
+
+	<script>
+        function filtrado()
+        {
+            var cadena=document.getElementById("busqueda").value;
+            if(cadena.length==0)
+                alert("¡No ha ingresado nigún producto!");
+            else
+                alert('Realizando busqueda del producto "'+cadena+'"...');
+                document.getElementById("busqueda").value=null;
+        }
+    </script>
+</body>
+</html>
