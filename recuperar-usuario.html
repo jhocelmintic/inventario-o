@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Cuenta de Usuario</title>
+    <style>
+        body
+        {
+        	background-image:linear-gradient(to bottom right,lightblue,white);
+			height:100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        div.recuperarUsuario
+        {
+        	border: medium dotted black;
+            padding:5px;
+        	width:50%;
+            height:50vh;
+            margin:25vh auto 25vh; 
+        }
+    </style>
+</head>
+<body>
+
+	<div class="recuperarUsuario">
+      <form action="#" method="GET">
+          <fieldset>
+              <legend><i>Formulario Para Recuperación De Usuario</i></legend>
+              <label for="correo">Email:</label>
+              <input type="email" id="correo" placeholder="example@proveedor.com" required><br><br>
+              <input type="submit" value="Enviar" onclick="enviarEmail()">
+          </fieldset>
+      </form>
+      <br><a href="#" title="Pagina de Inicio"><button type="button" onclick="regresarInicio()">Regresar</button></a>
+    </div>
+    
+    <script>
+        function enviarEmail(){
+        	alert("¡Envía el email si la validación fue correcta!");
+        }
+    	function regresarInicio(){
+        	alert("¡Se regresa a la pagina de inicio!");
+        }
+    </script>
+
+</body>
+</html>
